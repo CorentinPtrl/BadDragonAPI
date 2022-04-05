@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Corentin Pitrel</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <description>C# Library for Bad Dragon API</description>
+    <releaseNotes>Init</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>BadDragon BadDragonAPI</tags>
+  </metadata>
+</package>
