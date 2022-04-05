@@ -42,5 +42,5 @@ jobs:
     - name: Build
       run: dotnet build $SOLUTION -p:Version=$BUILD_VERSION --no-restore
 
-    - name: Publish
-      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
+    - name: Publish ${BUILD_VERSION}
+      run: nuget push BadDragonAPI\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
