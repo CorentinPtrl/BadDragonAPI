@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BadDragonAPI;
+﻿using BadDragonAPI;
 using BadDragonAPI.Data;
+using System;
 
 namespace BadDragonTest
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             BadDragon badDragon = new BadDragon();
             Inventory inv = badDragon.GetInventory(1);
-            foreach(Toy toy in inv.Toys)
+            foreach (Toy toy in inv.Toys)
             {
                 Console.WriteLine("Name : {0}, Price : {1}; Size : {2}", toy.Sku, toy.Price, toy.Size);
             }
@@ -30,7 +26,6 @@ namespace BadDragonTest
             {
                 Console.WriteLine("Sku : {0} = Name : {1}", ProdList.Sku, ProdList.Name);
             }
-            Console.ReadKey();
         }
     }
 }
