@@ -7,6 +7,7 @@
     <Description>BadDragon API library</Description>
     <RepositoryUrl>https://github.com/CorentinPtrl/BadDragonAPI</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
