@@ -40,7 +40,7 @@ jobs:
       uses: actions/setup-dotnet@v1
 
     - name: Package nuget
-      run: dotnet pack $SOLUTION --configuration release -o:package /p:PackageVersion=$BUILD_VERSION
+      run: dotnet pack $SOLUTION --configuration release -o:package /p:PackageVersion=0.0.2
     - name: Tree
       run: dir -r
 
