@@ -15,10 +15,19 @@
     <Deterministic>true</Deterministic>
     <PackageId>BadDragonAPI</PackageId>
 	<Version>0.0.1</Version>
-    <Authors>Corentin Pitrel</Authors>
 	<Company></Company>
 	<IsPackable>true</IsPackable>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<IsPackable>true</IsPackable>
+    <Title>BadDragon API</Title>
+	<Authors>Corentin Pitrel</Authors>
+    <Description>Bad Dragon API</Description>
+	<RepositoryType>git</RepositoryType>
+    <PackageTags>BadDragon BadDragonAPI</PackageTags>
+	<RepositoryUrl>https://github.com/CorentinPtrl/BadDragonAPI</RepositoryUrl>
+    <Copyright></Copyright>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
