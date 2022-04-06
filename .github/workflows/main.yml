@@ -18,7 +18,7 @@ jobs:
 
     env:
       BUILD_CONFIG: 'Release'
-      SOLUTION: 'BadDragonAPI.sln'
+      SOLUTION: 'BadDragonAPI/BadDragonAPI.csproj'
 
     runs-on: windows-latest
 
