@@ -41,6 +41,9 @@ jobs:
 
     - name: Build
       run: dotnet build $SOLUTION -p:Version=$BUILD_VERSION --no-restore
+
+    - name: Package nuget
+      run: dotnet pack $SOLUTION --configuration release -o:package /p:PackageVersion=$BUILD_VERSION
       
     - name: Tree
       run: dir -r
