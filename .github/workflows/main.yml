@@ -43,7 +43,7 @@ jobs:
       run: dotnet build $SOLUTION -p:Version=$BUILD_VERSION --no-restore
       
     - name: Tree
-      run: tree
+      run: dir /a-D /S /B
 
     - name: Publish
       run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
