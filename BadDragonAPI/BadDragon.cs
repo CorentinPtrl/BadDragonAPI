@@ -1,4 +1,5 @@
 ﻿using BadDragonAPI.Data;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,15 @@ namespace BadDragonAPI
 
         }
 
+        public ulong GetTotalInv()
+        {
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = client.GetAsync("https://bad-dragon.com/api/inventory-toys/total?type[]=ready_made&price[min]=0&price[max]=300&").Result;
+            response.EnsureSuccessStatusCode();
+            string responseBody = response.Content.ReadAsStringAsync().Result;
+            return JsonConvert.DeserializeObject<Dictionary<String, ulong>>(responseBody)["total"];
+        }
+
         public Inventory GetInventory(int page)
         {
             HttpClient client = new HttpClient();
@@ -25,13 +35,13 @@ namespace BadDragonAPI
             return Inventory.FromJson(responseBody);
         }
 
-        public Products[] GetProducts()
+        public Product[] GetProducts()
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = client.GetAsync("https://bad-dragon.com/api/products").Result;
             response.EnsureSuccessStatusCode();
             string responseBody = response.Content.ReadAsStringAsync().Result;
-            return Products.FromJson(responseBody);
+            return Product.FromJson(responseBody);
         }
 
         public ProductList[] GetProductsList()

@@ -7,7 +7,7 @@ using Newtonsoft.Json.Converters;
 
 namespace BadDragonAPI.Data
 {
-    public partial class Products
+    public partial class Product
     {
         [JsonProperty("sku")]
         public string Sku { get; set; }
@@ -179,9 +179,9 @@ namespace BadDragonAPI.Data
 
     public enum ProductType { Accessory, Insertable, Merchandise, Packer, Penetrable, Shooter, Vibrator, Wearable };
 
-    public partial class Products
+    public partial class Product
     {
-        public static Products[] FromJson(string json) => JsonConvert.DeserializeObject<Products[]>(json, BadDragonAPI.Data.ConverterProducts.Settings);
+        public static Product[] FromJson(string json) => JsonConvert.DeserializeObject<Product[]>(json, BadDragonAPI.Data.ConverterProducts.Settings);
     }
 
     internal static class ConverterProducts
