@@ -24,7 +24,6 @@ namespace BadDragonAPI
             string responseBody = response.Content.ReadAsStringAsync().Result;
             return JsonConvert.DeserializeObject<Dictionary<String, ulong>>(responseBody)["total"];
         }
-
         public Inventory GetInventory(int page)
         {
             HttpClient client = new HttpClient();
