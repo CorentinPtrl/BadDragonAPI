@@ -155,6 +155,17 @@ namespace BadDragonAPI.Data
 
     public enum ColorDisplay { Empty, Frankenpour, Rogue };
 
+    public enum Size : long { 
+        OneSize = 6,
+        Mini = 10,
+        Small = 1,
+        Medium = 2,
+        Large = 8,
+        ExtraLarge = 3,
+        TwoTLarge = 287
+
+    };
+
     public partial class Inventory
     {
         public static Inventory FromJson(string json) => JsonConvert.DeserializeObject<Inventory>(json, BadDragonAPI.Data.ConverterInventory.Settings);
