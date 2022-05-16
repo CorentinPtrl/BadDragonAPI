@@ -12,9 +12,20 @@ namespace BadDragonAPI
 {
     public class BadDragon
     {
+        public Dictionary<String, Product> CachedProducts = new Dictionary<string, Product>();
+
         public BadDragon()
         {
 
+        }
+
+        public void Init()
+        {
+            Product[] prods = GetProducts();
+            foreach(Product prod in prods)
+            {
+                CachedProducts.Add(prod.Sku, prod);
+            }
         }
 
         public ulong GetTotalInv()
