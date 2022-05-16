@@ -47,7 +47,9 @@ jobs:
       with:
           useConfigFile: true
           configFilePath: ./.github/gitversion.yml
-
+    - name: Build
+      run: dotnet build $SOLUTION --configuration release
+      
     - name: Package nuget
       run: dotnet pack $SOLUTION --configuration release -o:package /p:PackageVersion=${{ steps.gitversion.outputs.AssemblySemVer }}
     - name: Tree
